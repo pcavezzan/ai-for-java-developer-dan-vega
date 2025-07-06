@@ -2,16 +2,16 @@ package fr.ctw.spring.boot.ai.springbootiaworkshop.chat
 
 import org.springframework.ai.chat.client.ChatClient
 import org.springframework.ai.chat.model.ChatResponse
-import org.springframework.beans.factory.annotation.Qualifier
+import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RestController
 import reactor.core.publisher.Flux
 
 @RestController
-class ChatController(
-    @Qualifier("openAIChatClient") // Use the OpenAI chat client
-    private val chatClient: ChatClient
-) {
+class ChatController(private val chatClient: ChatClient) {
+
+    @Autowired
+    constructor(chatClientBuilder: ChatClient.Builder) : this(chatClient = chatClientBuilder.build())
 
     @GetMapping("/chat")
     fun chat(): String? =

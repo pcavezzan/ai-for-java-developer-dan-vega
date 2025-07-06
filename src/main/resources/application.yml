@@ -3,16 +3,9 @@ spring:
     name: spring-boot-ia-workshop
 
   ai:
-    chat:
-      client:
-        enabled: false
     openai:
       base-url: ${OPENAI_BASE_URL}
       api-key: ${OPENAI_API_KEY}
       chat:
         options:
           model: ${OPENAI_CHAT_MODEL}
-
-    ollama:
-      chat:
-        model: qwen2.5-coder:1.5b
