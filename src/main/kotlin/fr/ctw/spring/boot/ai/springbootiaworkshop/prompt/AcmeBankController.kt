@@ -36,4 +36,17 @@ class AcmeBankController(private val chatClient: ChatClient) {
             .call()
             .content()
 
+    /*
+    This method is commented out as it is not used in the current implementation.
+    It can be used to sanitize the user input to prevent any malicious input.
+    fun sanitizePrompt(message: String): String {
+        // Sanitize the message to prevent any malicious input
+        return message
+                .replace("(?i)ignore previous instructions".toRegex(), "")
+                .replace("(?i)system prompt".toRegex(), "")
+                .replace("(?i)you are now".toRegex(), "")
+    }
+    */
+
+
 }
