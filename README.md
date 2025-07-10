@@ -82,3 +82,9 @@ parent.
 To prevent this, the project POM contains empty overrides for these elements.
 If you manually switch to a different parent and actually want the inheritance, you need to remove those overrides.
 
+## Resources
+
+*
+* [Spring Boot Documentation](https://docs.spring.io/spring-boot/3.5.3/reference/htmlsingle/)
+* [Spring AI Documentation](https://docs.spring.io/spring-ai/reference/index.html)
+* [Spring AI Workshop, Dan Vega](https://github.com/danvega/spring-ai-workshop)
